@@ -10,7 +10,7 @@
           <span class="tit">{{ item.title }}</span>
           <span class="date">{{ item.time }}</span>
           <span class="detail" :style="{'display': item.detail ? 'block' : 'none'}">{{ item.detail }}</span>
-          <span class="icon_box"><span class="icon iconfont">&#xe761;</span></span>
+          <span class="icon_box"><span class="icon iconfont">&#xea66;</span></span>
         </li>
       </ul>
       <div class="more">
@@ -73,6 +73,10 @@ export default {
       background: #fff;
       font-size: 14px;
       cursor: pointer;
+      &:hover .img-box .pic {
+        transform: scale(1.1);
+        transition: all 0.5s;
+      }
 
       &:hover {
         transition: all 0.3s;
@@ -90,6 +94,7 @@ export default {
       .img-box {
         width: 100%;
         height: 310px;
+        overflow: hidden;
 
         .pic {
           display: block;
@@ -115,8 +120,8 @@ export default {
         justify-content: right;
 
         .icon {
-          font-size: 30px;
-          color: #ccc;
+          font-size: 25px;
+          color: #999;
           padding-right: 10px;
         }
       }

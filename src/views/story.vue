@@ -1,59 +1,70 @@
 <template>
   <div class="story">
-    <Header/>
     <div class="banner">
-      <img class="pic" :src="bannerImg"/>
+      <img class="pic" :src="bannerImg" />
     </div>
-    <div class="about">
-      <div class="title1">ABOUT TOYCITY</div>
-      <div class="title2">【品牌介绍】</div>
-      <div class="title3">——</div>
-      <div class="detail">
-        ToyCity玩具城市是一家中国原创潮流IP孵化平台，致力于让中国原创潮流文化从中国走出国门，通过潮玩文化传递“创造快乐，分享快乐”品牌理念；同时以潮玩IP为载体，融入当地城市文化，为城市打造潮流IP新地标；同时开创ATS潮玩空间，结合潮玩主题美陈，携手商业中心拓展新场景，塑造潮流主题商业中心新业态。重塑Z世代精神消费。
-      </div>
+    <div class="about" v-for="(about, index) in aboutList" :key="index">
+      <div class="title1">{{ about.title1 }}</div>
+      <div class="title2">{{ about.title2 }}</div>
+      <div class="title3">{{ about.title3 }}</div>
+      <div class="detail">{{ about.detail }}</div>
     </div>
     <ul class="about-content">
-      <li class="item">
-        <img class="pic" src="@/assets/image/ABUIABAEGAAgpNmo9QUo7OviQQwsAk4sAk.png.webp"/>
-        <p>使命</p>
-        <span>用心为消费者创造每一份快乐</span>
-      </li>
-
-      <li class="item">
-        <img class="pic" src="@/assets/image/ABUIABAEGAAgqdio9QUoKfDsQUwsAk4sAk.png.webp"/>
-        <p>愿景</p>
-        <span>让每个人都能找到属于自己的小确幸</span>
-      </li>
-
-      <li class="item">
-        <img class="pic" src="@/assets/image/ABUIABAEGAAghdio9QUooLWHCTCwCTiwCQ.png.webp"/>
-        <p>定位</p>
-        <span>“帮助成年人找到快乐”为己任的年轻潮玩品牌</span>
-      </li>
-
-      <li class="item">
-        <img class="pic" src="@/assets/image/ABUIABAEGAAg9deo9QUogJKrlQMwsAk4sAk.png.webp"/>
-        <p>价值观</p>
-        <span>让设计成为一种时尚；</span>
-        <span>让设计成为一种艺术；</span>
-        <span>让产品成为一种潮流；</span>
+      <li class="item" v-for="(item, index) in aboutContentList" :key="index">
+        <img class="pic" :src="item.img"/>
+        <p>{{ item.title }}</p>
+        <span>{{ item.sp1 }}</span>
+        <span>{{ item.sp2 }}</span>
+        <span>{{ item.sp3 }}</span>
       </li>
     </ul>
-    <story-content />
-    <Info />
+    <story-content/>
   </div>
 </template>
 
 <script>
-import Header from '@/components/header/header'
 import StoryContent from '@/components/story/storycontent'
-import Info from '@/components/info/info'
 
 export default {
-  components: { Header, StoryContent, Info },
+  components: { StoryContent },
   data () {
     return {
-      // bannerImg: require('@/assets/image/ABUIABACGAAg4ZWf9QUozJOWogMwgA842AQ.jpeg')
+      bannerImg: require('@/assets/image/ABUIABACGAAg4ZWf9QUozJOWogMwgA842AQ.jpg'),
+      aboutList: [
+        {
+          title1: 'ABOUT TOYCITY',
+          title2: '【品牌介绍】',
+          title3: '——',
+          detail: 'ToyCity玩具城市是一家中国原创潮流IP孵化平台，致力于让中国原创潮流文化从中国走出国门，通过潮玩文化传递“创造快乐，分享快乐”品牌理念；同时以潮玩IP为载体，融入当地城市文化，为城市打造潮流IP新地标；同时开创ATS潮玩空间，结合潮玩主题美陈，携手商业中心拓展新场景，塑造潮流主题商业中心新业态。重塑Z世代精神消费。'
+        }
+      ],
+      aboutContentList: [
+        {
+          img: require('@/assets/image/ABUIABAEGAAgpNmo9QUo7OviQQwsAk4sAk.png.webp'),
+          title: '使命',
+          sp1: '用心为消费者创造每一份快乐',
+          sp2: '',
+          sp3: ''
+        }, {
+          img: require('@/assets/image/ABUIABAEGAAgqdio9QUoKfDsQUwsAk4sAk.png.webp'),
+          title: '愿景',
+          sp1: '让每个人都能找到属于自己的小确幸',
+          sp2: '',
+          sp3: ''
+        }, {
+          img: require('@/assets/image/ABUIABAEGAAghdio9QUooLWHCTCwCTiwCQ.png.webp'),
+          title: '定位',
+          sp1: '“帮助成年人找到快乐”为己任的年轻潮玩品牌',
+          sp2: '',
+          sp3: ''
+        }, {
+          img: require('@/assets/image/ABUIABAEGAAg9deo9QUogJKrlQMwsAk4sAk.png.webp'),
+          title: '价值观',
+          sp1: '让设计成为一种时尚；',
+          sp2: '让设计成为一种艺术；',
+          sp3: '让产品成为一种潮流；'
+        }
+      ]
     }
   }
 }

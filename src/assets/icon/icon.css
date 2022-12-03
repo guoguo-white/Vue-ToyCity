@@ -1,7 +1,13 @@
 /* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+/*@font-face {*/
+/*    font-family: 'iconfont';  !* Project id 3771428 *!*/
+/*    src: url('//at.alicdn.com/t/c/font_3771428_exe0qyvbvci.woff2?t=1669909676136') format('woff2'),*/
+/*    url('//at.alicdn.com/t/c/font_3771428_exe0qyvbvci.woff?t=1669909676136') format('woff'),*/
+/*    url('//at.alicdn.com/t/c/font_3771428_exe0qyvbvci.ttf?t=1669909676136') format('truetype');*/
+/*}*/
 @font-face {
     font-family: 'iconfont';  /* Project id 3771428 */
-    src: url('//at.alicdn.com/t/c/font_3771428_ydqoknhg57p.woff2?t=1668529869327') format('woff2'),
-    url('//at.alicdn.com/t/c/font_3771428_ydqoknhg57p.woff?t=1668529869327') format('woff'),
-    url('//at.alicdn.com/t/c/font_3771428_ydqoknhg57p.ttf?t=1668529869327') format('truetype');
+    src: url('//at.alicdn.com/t/c/font_3771428_25rg60izxlx.woff2?t=1669995599367') format('woff2'),
+    url('//at.alicdn.com/t/c/font_3771428_25rg60izxlx.woff?t=1669995599367') format('woff'),
+    url('//at.alicdn.com/t/c/font_3771428_25rg60izxlx.ttf?t=1669995599367') format('truetype');
 }

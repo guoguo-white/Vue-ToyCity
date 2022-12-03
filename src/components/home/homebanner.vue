@@ -14,6 +14,7 @@
         <img style="width: 100%; height: 100%;" :src="item.url"/>
       </swiper-slide>
     </swiper>
+
   </div>
 </template>
 
